@@ -1,6 +1,6 @@
 <?php
 
-namespace Pwasm\WatTokens;
+namespace Pwasm\Tokens;
 
 abstract class Token
 {
