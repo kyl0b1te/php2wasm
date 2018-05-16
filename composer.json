@@ -1,0 +1,21 @@
+{
+    "name": "zhikiri/pwasm",
+    "description": "PHP to Webassebly",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kirill Zhivitsa",
+            "email": "zhikiri.dev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Pwasm\\": "src/Pwasm/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "nikic/php-parser": "4.*"
+    }
+}
