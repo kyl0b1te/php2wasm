@@ -22,7 +22,8 @@ class Pwasm
 
     public function getWAT(string $src): string
     {
-        return $this->save($this->getPath($src, 'wat'), new WAT($src));
+        $wat = new WAT($src);
+        return $this->save($this->getPath($src, 'wat'), $wat->create());
     }
 
     public function getWASM(string $src): string
@@ -36,9 +37,10 @@ class Pwasm
         return $this->storage_path . "$filename.$ext";
     }
 
-    private function save($path, Presentable $format)
+    private function save($path, $data)
     {
-        file_put_contents($path, $format->getData());
-        return $path;
+        //file_put_contents($path, $data);
+        //return $path;
+        return $data;
     }
 }
